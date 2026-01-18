@@ -1,0 +1,15 @@
+name: Governance Check
+
+on: [push, pull_request]
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify governance reference
+        run: |
+          if ! grep -R "HHI-GOV-01" README.md; then
+            echo "Missing HHI-GOV-01 governance reference"
+            exit 1
+          fi

@@ -2,7 +2,10 @@
 # HHI_GOV_01
 ## Longitudinal Governance Infrastructure
 ## Authority & Dependency Chain
-
+> **Governance-Lock Notice**
+>
+> This standard is locked at v1.0.0-governance-lock.
+> It defines enforceable governance behavior, not ethics or best practices.
 HHI-GOV-01 is a downstream governance standard within the Hollow House Institute stack.
 
 Upstream authority:

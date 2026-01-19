@@ -1,7 +1,15 @@
 # HHI-GOV-01
 # HHI_GOV_01
 ## Longitudinal Governance Infrastructure
+## Authority & Dependency Chain
 
+HHI-GOV-01 is a downstream governance standard within the Hollow House Institute stack.
+
+Upstream authority:
+1. Hollow_House_Institute
+2. Hollow_House_Standards_Library
+
+This standard inherits definitions, terminology, and governance constraints from upstream repositories.
 HHI_GOV_01 is the canonical governance standard of Hollow House Institute.
 
 It defines singular decision authority, escalation integrity, and behavioral

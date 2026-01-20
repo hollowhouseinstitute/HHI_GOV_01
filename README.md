@@ -1,4 +1,3 @@
-# HHI-GOV-01
 # HHI_GOV_01
 ## Longitudinal Governance Infrastructure
 ## Authority & Dependency Chain

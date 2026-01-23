@@ -2,7 +2,10 @@
 # HHI_GOV_01
 ## Longitudinal Governance Infrastructure
 ## Authority & Dependency Chain
-
+cd ~
+cd HHI_GOV_01
+git checkout -b readiness-clarity
+nano README.md
 HHI-GOV-01 is a downstream governance standard within the Hollow House Institute stack.
 
 Upstream authority:

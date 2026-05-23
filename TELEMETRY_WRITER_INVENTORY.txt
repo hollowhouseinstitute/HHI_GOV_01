@@ -1,0 +1,79 @@
+./.github/workflows/governance-enforce.yml:8:      - name: verify telemetry exists
+./.github/workflows/governance-enforce.yml:9:        run: test -f telemetry/GOVERNANCE_LOG.jsonl
+./.github/workflows/governance-enforce.yml:11:        run: test -f telemetry/GOVERNANCE_LOG.sha256
+./.github/workflows/governance-enforce.yml:13:        run: sha256sum -c telemetry/GOVERNANCE_LOG.sha256
+./.github/workflows/release-governance-gate.yml:10:      - name: verify telemetry
+./.github/workflows/release-governance-gate.yml:11:        run: test -f telemetry/GOVERNANCE_LOG.jsonl
+./.github/workflows/release-governance-gate.yml:13:        run: sha256sum -c telemetry/GOVERNANCE_LOG.sha256
+./.github/workflows/release-governance-gate.yml:15:        run: grep -q "10.5281/zenodo.20042925" telemetry/GOVERNANCE_LOG.jsonl
+./governance/EXECUTION_GATE.sh:3:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./governance/RUN_WITH_GOVERNANCE.sh:6:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./governance/RUN_WITH_GOVERNANCE.sh:24:# 3. Telemetry write (post-action, before validation)
+./governance/RUN_WITH_GOVERNANCE.sh:29:./telemetry/VALIDATE_LOG.sh || exit 1
+./governance/ENFORCE_COVERAGE.sh:3:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./governance/RESOLVE_STOP.sh:4:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./tools/generate_audit.sh:3:FILE="governance/telemetry.jsonl"
+./tools/log_event.sh:18:echo "{\"event\":\"$EVENT\",\"actor\":\"$ACTOR\",\"decision_boundary\":\"$BOUNDARY\",\"action\":\"$ACTION\",\"outcome\":\"$OUTCOME\",\"escalation\":\"$ESCALATION\",\"severity\":\"$SEVERITY\",\"timestamp\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}" >> governance/telemetry.jsonl
+./tools/package_audit.sh:6:cp governance/telemetry.jsonl "$OUTDIR/"
+./tools/governance_gate.sh:3:[ -f authority/telemetry/governance_telemetry.jsonl ] || { echo "Missing telemetry"; exit 1; }
+./telemetry/VALIDATE_LOG.sh:2:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./telemetry/VALIDATE_LOG.sh:15:  printf '{"event":"TELEMETRY_INVALID","actor":"system","decision_boundary":"LOG_VALIDATION","action":"VALIDATE","outcome":"DENY","escalation":true,"trace_id":"%s","session_id":"%s","timestamp":"%s"}\n' "$(cat /proc/sys/kernel/random/uuid)" "$(cat /proc/sys/kernel/random/uuid)" "$TIMESTAMP" >> "$LOG"
+./telemetry/VALIDATE_LOG.sh:19:  printf '{"event":"TELEMETRY_VALID","actor":"system","decision_boundary":"LOG_VALIDATION","action":"VALIDATE","outcome":"ALLOW","escalation":false,"trace_id":"%s","session_id":"%s","timestamp":"%s"}\n' "$(cat /proc/sys/kernel/random/uuid)" "$(cat /proc/sys/kernel/random/uuid)" "$TIMESTAMP" >> "$LOG"
+./telemetry/GOVERNANCE_DASHBOARD.sh:3:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./telemetry/ENFORCE_THRESHOLDS.sh:3:LOG="telemetry/GOVERNANCE_LOG.jsonl"
+./telemetry/EXPORT_AUDIT.sh:8:cp telemetry/GOVERNANCE_LOG.jsonl "$OUT"/ 2>/dev/null
+./runtime_api/governance_status_api.py:15:        "telemetry_status": "ACTIVE",
+./runtime_api/telemetry_export_api.py:6:@app.route("/telemetry/export", methods=["GET"])
+./runtime_api/telemetry_export_api.py:7:def telemetry_export():
+./runtime_api/telemetry_export_api.py:10:        "telemetry_status": "EXPORT_READY",
+./runtime_api/governance_runtime_api.py:16:        "telemetry_status": "ACTIVE"
+./runtime_api/governance_runtime_api.py:21:    with open("runtime/logs/telemetry_aggregate.jsonl") as f:
+./continuous_assurance/generate_assurance_report.py:9:    "telemetry_continuity": "VALID",
+./continuous_assurance/governance_continuity_score.py:4:ARCHIVE = Path("runtime/event_archive/governance_events.jsonl")
+./exports/export_governance_bundle.sh:5:cp -r telemetry export_bundle/
+./automation/daemon/governance_daemon.sh:4:echo "{\"timestamp\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"event\":\"governance_runtime_heartbeat\",\"status\":\"operational\"}" >> runtime/logs/governance_telemetry.jsonl
+./automation/build_runtime_stack.sh:6:echo "$EVENT" >> runtime/logs/governance_events.jsonl
+./automation/build_runtime_stack.sh:7:sha256sum runtime/logs/governance_events.jsonl > runtime/logs/governance_events.sha256
+./runtime/snapshots/20260508_033217/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/snapshots/20260508_033402/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/event_bus/governance_event_bus.py:7:ARCHIVE = Path("runtime/event_archive/governance_events.jsonl")
+./runtime/event_bus/governance_event_bus.py:8:TELEMETRY = Path("runtime/telemetry/latest_governance_event.json")
+./runtime/event_bus/governance_event_bus.py:10:TELEMETRY.parent.mkdir(parents=True, exist_ok=True)
+./runtime/event_bus/governance_event_bus.py:67:    TELEMETRY.write_text(json.dumps(event, indent=2, sort_keys=True), encoding="utf-8")
+./runtime/event_bus/governance_event_bus.py:74:        "outcome": "APPEND_ONLY_LOG_ACTIVE",
+./runtime/aggregator/aggregate_runtime.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/aggregator/aggregate_runtime.py:16:with open("runtime/logs/telemetry_aggregate.jsonl","w") as out:
+./runtime/audit_chains/hash_chain.py:6:with open("runtime/logs/governance_events.jsonl") as f, open("runtime/logs/immutable_audit_chain.jsonl","w") as out:
+./runtime/dashboard/dashboard_status.py:3:events=sum(1 for _ in open("runtime/logs/governance_events.jsonl"))
+./runtime/dashboard/dashboard_status.py:7:    "telemetry_events":events,
+./runtime/releases/20260508_031713/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/releases/20260508_031713/scoring/governance_continuity_score.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/releases/20260508_031713/dashboard/dashboard_status.py:3:events=sum(1 for _ in open("runtime/logs/governance_events.jsonl"))
+./runtime/releases/20260508_031713/dashboard/dashboard_status.py:7:    "telemetry_events":events,
+./runtime/scoring/governance_continuity_score.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/replay/governance_replay.py:3:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/replay/replay_governance_session.py:4:ARCHIVE = Path("runtime/event_archive/governance_events.jsonl")
+./runtime/replay/replay_governance_session.py:8:        print("NO_GOVERNANCE_EVENTS_FOUND")
+./runtime/escalation/escalation_engine.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/drift/drift_monitor.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/streaming/event_stream.py:7:    with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/analytics/trend_analysis.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/bundles/HHI_ENTERPRISE_BUNDLE_20260508_033611/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/bundles/HHI_ENTERPRISE_BUNDLE_20260508_033611/analytics/trend_analysis.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/bundles/HHI_ENTERPRISE_BUNDLE_20260508_033611/scoring/governance_continuity_score.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/bundles/HHI_ENTERPRISE_BUNDLE_20260508_033611/escalation/escalation_engine.py:6:with open("runtime/logs/governance_events.jsonl") as f:
+./runtime/api/governance_runtime_api.py:7:EVENTS = Path("runtime/event_archive/governance_events.jsonl")
+./runtime/api/governance_runtime_api.py:8:LATEST = Path("runtime/telemetry/latest_governance_event.json")
+./runtime/api/governance_runtime_api.py:23:        "telemetry": "ACTIVE",
+./runtime/api/governance_runtime_api.py:31:        return jsonify({"status": "NO_TELEMETRY"})
+./runtime/continuity_snapshots/20260508_035738/snapshots/20260508_033217/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/continuity_snapshots/20260508_035738/snapshots/20260508_033402/crosswalk/generate_crosswalk.py:7:    "Governance Telemetry":["Continuous Assurance","Audit Evidence"]
+./runtime/enforcement/telemetry.py:7:BASE_DIR = "runtime/telemetry/append_only"
+./runtime/enforcement/replay.py:5:TELEMETRY_DIR = "runtime/telemetry/append_only"
+./runtime/enforcement/replay.py:19:    for filename in sorted(os.listdir(TELEMETRY_DIR)):
+./runtime/enforcement/replay.py:23:        path = os.path.join(TELEMETRY_DIR, filename)
+./runtime/enforcement/precheck.py:46:        "generate telemetry"
+./runtime/enforcement/enforce.py:3:from telemetry import emit_governance_event
+./runtime/enforcement/enforce.py:39:    telemetry_event = emit_governance_event(event)
+./runtime/enforcement/enforce.py:60:        "telemetry_event": telemetry_event,

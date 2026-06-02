@@ -1,0 +1,18 @@
+{
+  "title": "HHI Governance Runtime",
+  "description": "An event-sourced governance runtime providing deterministic replay, integrity verification, adversarial assurance, and execution-time governance enforcement.",
+  "creators": [
+    {
+      "name": "Bui, Amy Pierce",
+      "orcid": "0009-0009-4806-1949"
+    }
+  ],
+  "keywords": [
+    "Governance",
+    "Event Sourcing",
+    "Replayability",
+    "Auditability",
+    "Execution-Time Governance"
+  ],
+  "upload_type": "software"
+}

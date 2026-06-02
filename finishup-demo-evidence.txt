@@ -1,0 +1,129 @@
+Installing dependencies...
+Running demo...
+
+
+╔════════════════════════════════════════════════════════════╗
+║     HHI Governance Runtime - Complete Demonstration        ║
+║     Execution-Time AI Governance Framework                 ║
+║     From Prototype → Product                               ║
+╚════════════════════════════════════════════════════════════╝
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 1: Artifact Creation[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Creating governance artifacts...
+
+✓ Created HHI_DEMO_001 (hash: f96bb5b3aa097450...)
+✓ Created HHI_DEMO_002 (hash: d2fd0abc1dd31c4f...)
+✓ Created HHI_DEMO_003 (hash: 9e1f470152eadfda...)
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 2: Artifact Validation[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Validating all artifacts...
+
+✓ HHI_DEMO_001: Hash match
+✓ HHI_DEMO_002: Hash match
+✓ HHI_DEMO_003: Hash match
+
+Validations: 3 total
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 3: Adversarial Testing[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Testing artifact resilience through mutation...
+
+Mutation Test: ✓ DETECTED
+  Original: f96bb5b3aa097450...
+  Mutated:  da94a595001a009a...
+  Rate: 15.0%
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 4: Governance State Reconstruction (Replay)[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Replaying all events to reconstruct governance state...
+
+Event Log Statistics:
+  Total Events: 7
+  Artifacts: 3
+  Violations: 1
+  Last Event: 1780415803.4596465
+
+Drift Indicators (Quantitative):
+  validation_pass_rate: 1.0000
+  violation_density: 0.3333
+  authority_concentration: 0.4286
+  adversary_detection_rate: 0.3333
+  governance_breach_rate: 0.0000
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 5: Cryptographic Proof Generation[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Generating cryptographic proofs of governance...
+
+✓ Proof generated: HHI_DEMO_001
+  Proof ID: 68714618051460f1...
+  Validated: True
+  Adversary Tested: True
+✓ Proof generated: HHI_DEMO_002
+  Proof ID: ca74ead491df5b89...
+  Validated: True
+  Adversary Tested: False
+✓ Proof generated: HHI_DEMO_003
+  Proof ID: 87c5ee9fd5cae76c...
+  Validated: True
+  Adversary Tested: False
+
+Proofs saved to: runtime/proofs/
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mPhase 6: Runtime Status & Summary[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+HHI Governance Runtime Status
+──────────────────────────────────────────────────
+Ledger Integrity: PASS
+Total Artifacts: 3
+Valid: 3/3
+Total Events: 7
+Total Violations: 1
+
+Governance Health: NOMINAL
+  Validation Pass Rate: 100.0%
+  Governance Breach Rate: 0.0000
+
+System State: ✓ GOVERNED
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;34mEvent Log Sample[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Recent governance events:
+
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;32m✓ Demonstration Complete[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+Artifacts created:
+  - Event log: hhi_event_log.jsonl
+  - State snapshot: governance_state.json
+  - Proofs: runtime/proofs/*.json
+
+Time turns behavior into infrastructure.
+Behavior is the most honest data there is.
+
+
+Demo complete. Evidence files:
+  - hhi_event_log.jsonl (event ledger)
+  - governance_state.json (state snapshot)
+  - runtime/proofs/ (cryptographic proofs)
+
+Run tests:
+  python3 -m pytest runtime/tests.py -v
+

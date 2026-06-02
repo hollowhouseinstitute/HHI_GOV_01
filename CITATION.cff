@@ -1,6 +1,16 @@
 cff-version: 1.2.0
-title: "Execution-Time Governance Audit Proof"
-version: "1.0.1"
-doi: 10.5281/zenodo.1876466
+title: "HHI Governance Runtime"
+version: "1.0.0"
+message: "If you use this software, please cite it."
 authors:
-- name: "Hollow House Institute"
+  - family-names: "Bui"
+    given-names: "Amy Pierce"
+    orcid: "https://orcid.org/0009-0009-4806-1949"
+license: "MIT"
+repository-code: "https://github.com/Hollow-house-institute/HHI_GOV_01"
+keywords:
+  - governance
+  - event-sourcing
+  - replayability
+  - auditability
+  - execution-time-governance

@@ -1,4 +1,6 @@
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20513185.svg)](https://doi.org/10.5281/zenodo.20513185)
+
 ---
 
 ## Status: NON-CANONICAL (DEVELOPMENT ONLY)
@@ -361,3 +363,12 @@ Founder, Hollow House Institute
 ![Provenance](https://img.shields.io/badge/HHI-Governed_Authorship-black)
 
 This artifact follows the HHI governed authorship pattern: human-origin meaning, AI-executed structure, drift-free.
+
+## Citation
+
+If you use HHI Governance Runtime in research, publications, governance systems, or software projects, please cite:
+
+Amy Pierce Bui. *HHI Governance Runtime v1.0.0: Execution-Time Governance Audit Proof*. Zenodo (2026).
+
+DOI: https://doi.org/10.5281/zenodo.20513185
+

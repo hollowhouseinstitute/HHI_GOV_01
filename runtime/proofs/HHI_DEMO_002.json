@@ -1,0 +1,20 @@
+{
+  "proof_id": "450b10394989346a68d5406a5447e5af88f382336c254c13765f6fff5f5a4566",
+  "artifact_id": "HHI_DEMO_002",
+  "hash": "d2fd0abc1dd31c4fac68477248dce57e95c7a3027d1d35b3116b52f5e977b918",
+  "created_by": "builder",
+  "created_at": 1780416157.9191706,
+  "validated_by": "validator",
+  "validated_at": 1780416158.1098256,
+  "validation_passed": true,
+  "event_chain_hash": "c730a9b13c653f6f0afee8396fa04432b97b4c26a4e304f32a9badfada9b3bf7",
+  "event_count": 2,
+  "adversary_tested": false,
+  "drift_indicators": {
+    "validation_pass_rate": 1.0,
+    "violation_density": 0.3333333333333333,
+    "authority_concentration": 0.42857142857142855,
+    "adversary_detection_rate": 0.3333333333333333,
+    "governance_breach_rate": 0.0
+  }
+}

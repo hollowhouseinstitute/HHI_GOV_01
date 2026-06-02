@@ -1,0 +1,28 @@
+{
+  "screenshots": [
+    {
+      "id": "PR_OVERVIEW",
+      "description": "2313 additions, 17 files changed"
+    },
+    {
+      "id": "IMPLEMENTATION_SUMMARY",
+      "description": "Phase 1-3 runtime implementation"
+    },
+    {
+      "id": "MUTATION_DETECTION",
+      "description": "Mutation Test DETECTED"
+    },
+    {
+      "id": "REPLAY",
+      "description": "Governance State Reconstruction"
+    },
+    {
+      "id": "PROOF_GENERATION",
+      "description": "Cryptographic proof generation"
+    },
+    {
+      "id": "RUNTIME_STATUS",
+      "description": "Ledger Integrity PASS"
+    }
+  ]
+}

@@ -372,3 +372,10 @@ Amy Pierce Bui. *HHI Governance Runtime v1.0.0: Execution-Time Governance Audit 
 
 DOI: https://doi.org/10.5281/zenodo.20513185
 
+
+## DEV Challenge Submission
+
+Read the full project write-up:
+
+https://dev.to/hollowhouse/from-static-governance-standard-to-executable-governance-runtime-reviving-hhigov01-with-1am8
+
